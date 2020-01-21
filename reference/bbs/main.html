@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META charset="utf-8">
+<style>
+*{
+font-size ="9pt";
+}
+</style>
+</HEAD>
+<BODY>
+<center>
+<h1>회원 관리 게시판</h1>
+<table width=600px border=1px>
+<tr><td width=300px><a href="select.php"> 회원 조회  </a></td>
+<td width=300px><a href="insert.php"> 회원가입 </a></td></tr>
+<tr><td>
+<FORM METHOD="get" ACTION="update.php">
+	회원 수정 <INPUT TYPE ="text" NAME="userID" value="id 입력">
+	<INPUT TYPE="submit" VALUE="수정">
+</FORM></td>
+<td>
+<FORM METHOD="get" ACTION="delete.php">
+	회원 삭제  <INPUT TYPE ="text" NAME="userID" value="id 입력">
+	<INPUT TYPE="submit" VALUE="삭제">
+</FORM></td></tr>
+</table>
+
+</BODY>
+</HTML>
