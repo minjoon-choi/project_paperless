@@ -6,7 +6,9 @@
 </head>
 
 <body>
-<h1> hello world </h1>
+
+<form method="post" action="process.php">
+<label> 
 
 <table style ="width:30%">
 <tr>
