@@ -1,18 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<META charset = "utf-8">
-<title> 로그인 - Paperless</title>
+<meta charset="utf-8" />
+<?php
+session_start();
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+	echo "<meta http-equiv='refresh' content='0;url=login.php'>";
+	exit;
+}
+$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['user_name'];
+echo "<p>안녕하세요. $user_name($user_id)님</p>";
+echo "<p><a href='logout.php'>로그아웃</a></p>";
+?>
+<title> 메인 - Paperless</title>
 </head>
 
 <body>
-
-<form method="post" action="process.php">
-<label> I  D  : <input type="text" name="employee_id" /></label><br>
-<label> PW  : <input type="test" name="employee_pw" /></label><br><br>
-<input type="submit" />
-</form>
-
+<h1>hello world!</h1>
 </body>
 </html>
 
