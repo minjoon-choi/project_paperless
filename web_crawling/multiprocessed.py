@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode, quote_plus, unquote
 import pymysql
+from sqlalchemy import create_engine
 import pandas as pd
 from multiprocessing import Pool
 import time
@@ -98,16 +99,12 @@ def find_page(page):
     df = pd.DataFrame(dictionary)
     return df
 
-    
-
 
 if __name__=='__main__':
     print("11")
     start_time = time.time()
     pool = Pool(processes=16)
     res = pool.map(find_page, give_page())
-        
-
     pd.set_option('display.max_rows', None)
     print(res)
     #res.to_csv('test.csv', sep='\t', encoding='utf-8')
